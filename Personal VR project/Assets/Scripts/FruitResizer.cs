@@ -12,6 +12,7 @@ public class FruitResizer : MonoBehaviour
     private float sizeModifier;
 
     public float weight;
+    public bool isWeighted;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +26,4 @@ public class FruitResizer : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

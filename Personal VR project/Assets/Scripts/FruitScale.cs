@@ -10,7 +10,7 @@ public class FruitScale : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        scaleText.text = "0g";
     }
 
     // Update is called once per frame
@@ -25,7 +25,11 @@ public class FruitScale : MonoBehaviour
         {
             FruitResizer currentFruit = other.gameObject.GetComponent<FruitResizer>();
 
-            scaleText.text = currentFruit.weight.ToString();
+            if(currentFruit == null)
+                currentFruit = other.gameObject.GetComponentInParent<FruitResizer>();
+
+            scaleText.text = currentFruit.weight.ToString() + "g";
+            currentFruit.isWeighted = true;
         }
     }
 
@@ -33,7 +37,7 @@ public class FruitScale : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Fruit"))
         {
-            scaleText.text = "0";
+            scaleText.text = "0g";
         }
     }
 }
