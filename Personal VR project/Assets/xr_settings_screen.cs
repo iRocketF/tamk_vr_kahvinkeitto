@@ -1,16 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
-public class GameManager : MonoBehaviour
+public class XR_settings_screen : MonoBehaviour
 {
-    public string difficulty;
-    public float goal;
-
-    public Button resetButton;
-
+    public Button hoverButton;
+    public Button grabButton;
+    public Button grabHoldButton;
 
     // Start is called before the first frame update
     void Start()
@@ -22,15 +20,5 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void SetDifficulty()
-    {
-
-    }
-
-    public void Reset()
-    {
-        SceneManager.LoadScene(0);
     }
 }

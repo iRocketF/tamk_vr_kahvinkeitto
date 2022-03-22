@@ -28,8 +28,14 @@ public class FruitScale : MonoBehaviour
             if(currentFruit == null)
                 currentFruit = other.gameObject.GetComponentInParent<FruitResizer>();
 
-            scaleText.text = currentFruit.weight.ToString() + "g";
-            currentFruit.isWeighted = true;
+            if(!currentFruit.isCollected)
+            {
+                scaleText.text = currentFruit.weight.ToString() + "g";
+                currentFruit.isWeighted = true;
+                currentFruit.isCollected = true;
+            }
+
+
         }
     }
 

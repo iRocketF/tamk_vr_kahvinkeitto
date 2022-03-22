@@ -13,6 +13,7 @@ public class FruitResizer : MonoBehaviour
 
     public float weight;
     public bool isWeighted;
+    public bool isCollected;
 
     // Start is called before the first frame update
     void Start()
